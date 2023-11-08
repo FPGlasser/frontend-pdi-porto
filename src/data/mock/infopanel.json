@@ -1,0 +1,24 @@
+{
+  "velocity": {
+    "a": {
+      "value": 88
+    },
+    "b": {
+      "value": 90
+    },
+    "unit": "cm/s"
+  },
+  "distancy": {
+    "a": {
+      "value": 90
+    },
+    "b": {
+      "value": 81
+    },
+    "unit": "m"
+  },
+  "angle": {
+    "value": 45,
+    "unit": "°"
+  }
+}

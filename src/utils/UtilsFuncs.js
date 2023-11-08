@@ -5,9 +5,13 @@
  * @returns {String}
  */
 
-export const formatPathname = (pathname) =>{
+export const formatPathname = (pathname) => {
+
   let path = pathname.substring(1)
-  return path.replace('/', ' > ').toUpperCase()
+  if (path[0] !== undefined && path.length > 1) {
+    path = path[0].toUpperCase() + path.substring(1)
+  }
+  return path.replace('/', ' > ')
 }
 
 /**
