@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import  terminals  from "../../data/terminais.json";
 import { validateStatusTerminal } from "../../utils";
 import { useParams, useNavigate } from "react-router-dom";
+import Home from "../home/Home"
 
 const TerminalOper = () => {
   const { code } = useParams();
@@ -19,7 +20,11 @@ const TerminalOper = () => {
    }
   }, []);
 
-  return <div>TerminalOper</div>;
+  return (
+    <div>
+      <Home/>
+    </div>
+  )
 };
 
 export default TerminalOper;
