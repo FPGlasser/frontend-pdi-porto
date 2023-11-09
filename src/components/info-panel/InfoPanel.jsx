@@ -1,11 +1,12 @@
 import React from "react";
 import CardPanelDisplay from "../card-panel-display/CardPanelDisplay";
-import { useData } from "../../hooks";
+import { useDataStore } from "../../stores/Stores";
 
 import style from "./style.module.css";
 
-const InfoPanel = ({velocity, distancy, angle}) => {
-  
+const InfoPanel = () => {
+  const data  = useDataStore((state) => state.data);
+  const { velocity, distancy, angle } = data;
   return (
     <div className={style.container}>
       <div className={style.panel__title}>

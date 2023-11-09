@@ -1,7 +1,10 @@
 import React from 'react'
 import style from './style.module.css'
+import { useDataStore } from '../../stores/Stores'
 
-const AnimationDisplay = ({velocity, distancy, angle}) => {
+const AnimationDisplay = () => {
+  const data = useDataStore((state) => state.data)
+  const {angle} = data
   
   return (
     <div className={style.container}>
