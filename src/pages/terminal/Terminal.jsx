@@ -4,7 +4,6 @@ import { CardTerminal } from "../../components";
 import terminals from "../../data/terminais.json";
 
 const Terminal = () => {
-  // const { id } = useParams();
   return (
       <div>
         <ul className={style.container__card}>
