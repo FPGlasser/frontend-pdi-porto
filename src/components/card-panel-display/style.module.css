@@ -1,0 +1,31 @@
+.card_panel{
+  flex: 1;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+}
+
+.panel__values{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.value{
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--font-hack);
+}
+
+.unit{
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--font-secondary);
+}
+.description{
+  color: var(--font-variant);
+}

@@ -1,0 +1,33 @@
+.container{
+  padding: 16px;
+  background-color: var(--bg-color-2nd);
+  border: 1px solid var(--ui-color);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel__title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: var(--ui-color);
+}
+
+.panel_row{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row__title{
+  font-size: 18px;
+  color: var(--font-primary);
+}
+.card__row{
+  display: flex;
+  gap: 16px;
+}
+

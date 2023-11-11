@@ -1,0 +1,10 @@
+.container{
+  flex: 1;
+  background-color: var(--bg-color-2nd);
+  border: 1px solid var(--ui-color);
+  border-radius: 16px;
+}
+
+.canva{
+  background-color: rgba(4, 72, 88, 0.5);
+}
