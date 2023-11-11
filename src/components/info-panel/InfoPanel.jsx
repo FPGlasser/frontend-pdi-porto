@@ -1,12 +1,9 @@
 import React from "react";
 import CardPanelDisplay from "../card-panel-display/CardPanelDisplay";
-import { useDataStore } from "../../stores/Stores";
 
 import style from "./style.module.css";
 
-const InfoPanel = () => {
-  const data  = useDataStore((state) => state.data);
-  const { velocity, distancy, angle } = data;
+const InfoPanel = ({ date }) => {
   return (
     <div className={style.container}>
       <div className={style.panel__title}>
@@ -17,13 +14,13 @@ const InfoPanel = () => {
         <p className={style.row__title}>Velocidade:</p>
         <div className={style.card__row}>
           <CardPanelDisplay
-            value={velocity.a.value}
-            unit={velocity.unit}
+            value={date.velocityD}
+            unit={date.unit_vel}
             description={"Velocidade Lado A"}
           />
           <CardPanelDisplay
-            value={velocity.b.value}
-            unit={velocity.unit}
+            value={date.velocityE}
+            unit={date.unit_vel}
             description={"Velocidade Lado B"}
           />
         </div>
@@ -33,13 +30,13 @@ const InfoPanel = () => {
 
         <div className={style.card__row}>
           <CardPanelDisplay
-            value={distancy.a.value}
-            unit={distancy.unit}
+            value={date.distanceD}
+            unit={date.unit_dis}
             description={"Distância do labo A"}
           />
           <CardPanelDisplay
-            value={distancy.b.value}
-            unit={distancy.unit}
+            value={date.distanceE}
+            unit={date.unit_dis}
             description={"Distância do labo B"}
           />
         </div>
@@ -49,8 +46,8 @@ const InfoPanel = () => {
         <p className={style.row__title}>Ângulo:</p>
 
         <CardPanelDisplay
-          value={angle.value}
-          unit={angle.unit}
+          value={date.angle}
+          unit={date.unit_ang}
           description={"Angulo do navio"}
         />
       </div>
