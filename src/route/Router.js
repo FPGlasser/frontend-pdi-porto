@@ -2,7 +2,6 @@ import { createBrowserRouter } from "react-router-dom";
 import {
   RootLayout,
   Home,
-  Overview,
   Tracagem,
   Terminal,
   Page404,
@@ -16,15 +15,6 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />
-      },
-      {
-        path: 'overview',
-        element: <Overview />
-      },
-
-      {
-        path: 'terminal',
         element: <Tracagem />,
         children: [
           {

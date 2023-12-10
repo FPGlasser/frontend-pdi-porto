@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { InfoPanel, AnimationDisplay } from "../../components";
-import { useParams } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import io from 'socket.io-client'
 import style from "./style.module.css";
 import { useDataStore } from "../../stores/Stores";
@@ -13,6 +13,17 @@ const TerminalOper = () => {
 
   const updateData = useDataStore((state)=>state.updateData);
   const { code } = useParams();
+
+  const [showAlert, setShowAlert] = useState(false);
+
+ 
+  const displayAlert = () => {
+    setShowAlert(true);
+
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 1000);
+  };
 
   useEffect(() => {
     socket.emit('join', `${code}`);
@@ -28,14 +39,23 @@ const TerminalOper = () => {
   }, [code]);
 
   return (
-    <div className={style.container}>
-      <div className={`${style.container__box} ${style.box_1}`}>
-        <AnimationDisplay />
+    <div className={style.container__box}>
+      <div className={style.alertWrapper}>
+        <NavLink to={"/terminal"} className={style.container__voltar}> 
+          <p className={style.conteinerVoltar__texto}> Voltar aos berçários </p> 
+        </NavLink>
+        {showAlert && <div className={style.alert}> Velocidade excedida! </div>}
       </div>
-      <div className={`${style.container__box} ${style.box_2}`}>
-        <InfoPanel/>
+      <div className={style.container}>
+        <div className={`${style.container__box} ${style.box_1}`}>
+          <AnimationDisplay />
+        </div>
+        <div className={`${style.container__box} ${style.box_2}`}>
+          <InfoPanel displayAlert={displayAlert} />
+        </div>
       </div>
     </div>
+    
   );
 };
 

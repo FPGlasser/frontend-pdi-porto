@@ -1,8 +1,49 @@
+.container__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 .container{
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.alertWrapper{
+display: flex;
+justify-content:space-between;
+}
+
+.alert{
+  background-color: yellow;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 15vw;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+}
+
+.container__voltar{
+  background-color: var(--bg-color-2nd);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  width: 15vw;
+}
+
+.conteinerVoltar__texto{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.conteinerVoltar__texto:hover{
+  color: var(--ui-color);
 }
 
 .box_1{

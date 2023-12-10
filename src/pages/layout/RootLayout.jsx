@@ -1,17 +1,11 @@
 import React from 'react'
-import { Outlet, useResolvedPath, useRoutes } from 'react-router-dom'
-import { Topbar, Sidebar } from '../../components'
-import { formatPathname } from "../../utils";
+import { Outlet} from 'react-router-dom'
+import { Topbar} from '../../components'
 import style from './style.module.css'
 
 const RootLayout = () => {
- const {pathname} =  useResolvedPath()
- const formatedpath = formatPathname(pathname)
   return (
     <div className={style['container']}>
-      <aside className={style.container__aside}>
-        <Sidebar />
-      </aside>
 
       <div className={style.container__box}>
         
@@ -20,7 +14,6 @@ const RootLayout = () => {
         </header>
 
         <main className={style['box--main']}>
-          <p className={style.pathname}>{formatedpath}</p>
           <Outlet />
         </main>
 

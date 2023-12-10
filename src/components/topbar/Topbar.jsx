@@ -4,7 +4,7 @@ import style from './style.module.css'
 const Topbar = () => {
   return (
     <nav className={style.nav}>
-      top bar
+      <p className={style.texto}>ATRACAGEM PORTO DO PECÉM</p>
     </nav>
   )
 }
