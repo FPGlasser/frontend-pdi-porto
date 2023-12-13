@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import style from "./style.module.css";
 
 const CardPanelDisplay = ({ value, unit, description, displayAlert }) => {
-  const threshold = 10;
+  const threshold = 15;
   const shouldApplyCondition = unit === "cm/s";
 
   useEffect(() => {
